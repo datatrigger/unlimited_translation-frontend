@@ -28,7 +28,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/unlimited-translation_frontend_flask:latest
-        cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/unlimited-translation_frontend_flask:buildcache
-        cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/unlimited-translation_frontend_flask:buildcache,mode=max
+        tags: ${{ secrets.DOCKER_HUB_USERNAME }}/unlimited-translation_frontend_flask:docker_swarm
+        cache-from: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/unlimited-translation_frontend_flask:buildcache_docker_swarm
+        cache-to: type=registry,ref=${{ secrets.DOCKER_HUB_USERNAME }}/unlimited-translation_frontend_flask:buildcache_docker_swarm,mode=max
 
